@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+button {
+  padding: 15px 30px;
+  background-color: rgb(19, 73, 19);
+  color: #fff;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button:disabled:hover {
+  transform: none;
+  background-color: gray;
+}
+
+button:disabled {
+  background: gray;
+  cursor: not-allowed;
+}

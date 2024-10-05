@@ -1,0 +1,75 @@
+/* Stiluri pentru fundalul modalului */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundal semi-transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Asigură-te că este deasupra altor elemente */
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+/* Stiluri pentru conținutul modalului */
+.modal-content {
+  background-color: white; /* Fundal alb pentru conținut */
+  padding: 25px 75px;
+  border-radius: 8px; /* Colțuri rotunjite */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Umbră */
+  width: 800px; /* Lățimea modalului */
+}
+
+/* Stiluri pentru butonul de închidere */
+.close-button {
+  background: none;
+  color: black;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  float: right; /* Plasează butonul în colțul din dreapta sus */
+}
+
+/* Stiluri pentru titlu */
+.modal-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+/* Container pentru câmpurile de input */
+.form-row {
+  display: flex;
+  justify-content: space-between; /* Împarte spațiul între câmpuri */
+  margin-bottom: 15px; /* Spațiu între rânduri */
+}
+
+/* Stiluri pentru câmpurile de input */
+input,
+select {
+  width: 100%; /* Lățimea câmpurilor */
+  padding: 10px; /* Spațiere internă */
+  border: 1px solid #ccc; /* Bordură gri deschis */
+  border-radius: 4px; /* Colțuri rotunjite */
+  transition: border-color 0.3s; /* Tranziție pentru bordură */
+}
+
+/* Stiluri pentru câmpurile de input la focus */
+input:focus,
+select:focus {
+  border-color: #007bff; /* Bordură albastră la focus */
+  outline: none; /* Elimină conturul implicit */
+}
+
+/* Stiluri pentru mesajele de eroare */
+.error-message {
+  color: red; /* Culoare roșie pentru mesajele de eroare */
+  font-size: 12px; /* Dimensiune mică pentru mesajele de eroare */
+  margin-bottom: 10px; /* Spațiu sub mesajul de eroare */
+}

@@ -1,0 +1,130 @@
+<div class="modal">
+  <div class="modal-content">
+    <button class="close-button" (click)="closeModal()">X</button>
+    <h2 class="modal-title">Add New Car</h2>
+    <form [formGroup]="carForm" (ngSubmit)="submit()">
+      <div class="form-row">
+        <div class="form-item">
+          <label> Model: </label>
+          <input formControlName="model" required />
+          <div
+            *ngIf="
+              carForm.get('model')?.invalid &&
+              (carForm.get('model')?.touched || carForm.get('model')?.dirty)
+            "
+            class="error-message"
+          >
+            Model is required.
+          </div>
+        </div>
+        <div class="form-item">
+          <label> Make: </label>
+          <input formControlName="make" required />
+          <div
+            *ngIf="
+              carForm.get('make')?.invalid &&
+              (carForm.get('make')?.touched || carForm.get('make')?.dirty)
+            "
+            class="error-message"
+          >
+            Make is required.
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-item">
+          <label> Plate Number: </label>
+          <input formControlName="plateNumber" required />
+          <div
+            *ngIf="
+              carForm.get('plateNumber')?.invalid &&
+              (carForm.get('plateNumber')?.touched ||
+                carForm.get('plateNumber')?.dirty)
+            "
+            class="error-message"
+          >
+            Plate Number is required.
+          </div>
+        </div>
+        <div class="form-item">
+          <label> VIN: </label>
+          <input formControlName="vin" required />
+          <div
+            *ngIf="
+              carForm.get('vin')?.invalid &&
+              (carForm.get('vin')?.touched || carForm.get('vin')?.dirty)
+            "
+            class="error-message"
+          >
+            VIN is required.
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-item">
+          <label> Manufacture Year: </label>
+          <input formControlName="manufactureYear" required type="number" />
+          <div
+            *ngIf="
+              carForm.get('manufactureYear')?.invalid &&
+              (carForm.get('manufactureYear')?.touched ||
+                carForm.get('manufactureYear')?.dirty)
+            "
+            class="error-message"
+          >
+            Please enter a valid year (1886 - current year).
+          </div>
+        </div>
+        <div class="form-item">
+          <label> HP: </label>
+          <input formControlName="hp" required type="number" />
+          <div
+            *ngIf="
+              carForm.get('hp')?.invalid &&
+              (carForm.get('hp')?.touched || carForm.get('hp')?.dirty)
+            "
+            class="error-message"
+          >
+            HP is required and must be greater than 0.
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-item">
+          <label> Engine CC: </label>
+          <input formControlName="engineCc" required type="number" />
+          <div
+            *ngIf="
+              carForm.get('engineCc')?.invalid &&
+              (carForm.get('engineCc')?.touched ||
+                carForm.get('engineCc')?.dirty)
+            "
+            class="error-message"
+          >
+            Engine CC is required and must be greater than 0.
+          </div>
+        </div>
+        <div class="form-item">
+          <label> Engine Type: </label>
+          <select formControlName="engineType" required>
+            <option value="">Select engine type</option>
+            <option value="Petrol">Petrol</option>
+            <option value="Diesel">Diesel</option>
+            <option value="Electric">Electric</option>
+          </select>
+          <div
+            *ngIf="
+              carForm.get('engineType')?.invalid &&
+              (carForm.get('engineType')?.touched ||
+                carForm.get('engineType')?.dirty)
+            "
+            class="error-message"
+          >
+            Engine Type is required.
+          </div>
+        </div>
+      </div>
+      <button type="submit">Add Car</button>
+    </form>
+  </div>
+</div>

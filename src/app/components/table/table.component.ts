@@ -60,6 +60,7 @@ export class TableComponent implements OnInit, OnDestroy {
     if (this.selectedCar) {
       //mai intai trebuie sa verifice daca nu este null prin if
       this.carService.deleteCar(this.selectedCar.vin);
+      this.selectedCar = null;
     }
   }
 
